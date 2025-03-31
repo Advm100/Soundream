@@ -1,0 +1,100 @@
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes wave {
+    0% { height: 10px; }
+    50% { height: 30px; }
+    100% { height: 10px; }
+}
+
+.spinning {
+    animation: spin 12s linear infinite;
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+.album-cover {
+    width: 250px;
+    height: 250px;
+    background-color: #333;
+    border-radius: 50%;
+    background-image: radial-gradient(circle, var(--accent-color) 10%, transparent 11%), 
+                      radial-gradient(circle at 30% 15%, var(--accent-color) 5%, transparent 6%),
+                      radial-gradient(circle at 70% 85%, var(--accent-color) 5%, transparent 6%);
+    background-size: 2px 2px, 100px 100px, 150px 150px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 30px rgba(157, 78, 221, 0.5);
+}
+
+.album-cover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 30%;
+    background-color: #121212;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.audio-waves {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    height: 40px;
+}
+
+.audio-waves span {
+    display: block;
+    width: 4px;
+    height: 10px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    animation: wave 1.5s ease-in-out infinite;
+}
+
+.audio-waves span:nth-child(1) { animation-delay: 0.2s; }
+.audio-waves span:nth-child(2) { animation-delay: 0.4s; }
+.audio-waves span:nth-child(3) { animation-delay: 0.6s; }
+.audio-waves span:nth-child(4) { animation-delay: 0.8s; }
+.audio-waves span:nth-child(5) { animation-delay: 1s; }
+
+.animate-text {
+    position: relative;
+    overflow: hidden;
+}
+
+.animate-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--background-dark);
+    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+    z-index: 2;
+}
+
+@keyframes reveal {
+    0% { width: 0%; left: 0; }
+    50% { width: 100%; left: 0; }
+    100% { width: 0%; left: 100%; }
+}

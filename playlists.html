@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists - NightFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/playlists.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-music"></i>
+            <span>NightFlow</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="explore.html">Explorer</a></li>
+                <li><a href="library.html">Bibliothèque</a></li>
+                <li><a href="playlists.html" class="active">Playlists</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Rechercher...">
+            </div>
+            <button class="btn-profile">
+                <i class="fas fa-user"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="playlists-header">
+            <h1>Vos Playlists</h1>
+            <button class="btn-create-playlist">
+                <i class="fas fa-plus"></i> Créer une playlist
+            </button>
+        </section>
+
+        <div class="playlists-container">
+            <div class="playlist-grid">
+                <!-- Carte pour créer une playlist -->
+                <div class="playlist-card create-playlist">
+                    <div class="playlist-create-icon">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <h3>Créer une playlist</h3>
+                </div>
+                
+                <!-- Playlists existantes -->
+                <div class="playlist-card">
+                    <div class="playlist-image">
+                        <img src="https://via.placeholder.com/200/121212/9d4edd?text=♫" alt="Playlist">
+                        <div class="playlist-overlay">
+                            <button class="btn-play-playlist">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="playlist-info">
+                        <h3>Ambiance Nocturne</h3>
+                        <p>12 titres • Créée par vous</p>
+                    </div>
+                </div>
+                
+                <div class="playlist-card">
+                    <div class="playlist-image">
+                        <img src="https://via.placeholder.com/200/121212/9d4edd?text=♫" alt="Playlist">
+                        <div class="playlist-overlay">
+                            <button class="btn-play-playlist">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="playlist-info">
+                        <h3>Concentration</h3>
+                        <p>8 titres • Créée par vous</p>
+                    </div>
+                </div>
+                
+                <div class="playlist-card">
+                    <div class="playlist-image">
+                        <img src="https://via.placeholder.com/200/121212/9d4edd?text=♫" alt="Playlist">
+                        <div class="playlist-overlay">
+                            <button class="btn-play-playlist">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="playlist-info">
+                        <h3>Soirée Lounge</h3>
+                        <p>15 titres • Créée par vous</p>
+                    </div>
+                </div>
+                
+                <div class="playlist-card">
+                    <div class="playlist-image">
+                        <img src="https://via.placeholder.com/200/121212/9d4edd?text=♫" alt="Playlist">
+                        <div class="playlist-overlay">
+                            <button class="btn-play-playlist">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="playlist-info">
+                        <h3>Jazz Moderne</h3>
+                        <p>10 titres • Créée par vous</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="shared-playlists">
+            <h2>Playlists partagées avec vous</h2>
+            
+            <div class="playlist-grid">
+                <div class="playlist-card">
+                    <div class="playlist-image">
+                        <img src="https://via.placeholder.com/200/121212/9d4edd?text=♫" alt="Playlist">
+                        <div class="playlist-overlay">
+                            <button class="btn-play-playlist">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="playlist-info">
+                        <h3>Électro Ambient</h3>
+                        <p>18 titres • Partagée par Ami1</p>
+                    </div>
+                </div>
+                
+                <div class="playlist-card">
+                    <div class="playlist-image">
+                        <img src="https://via.placeholder.com/200/121212/9d4edd?text=♫" alt="Playlist">
+                        <div class="playlist-overlay">
+                            <button class="btn-play-playlist">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="playlist-info">
+                        <h3>Lo-Fi pour étudier</h3>
+                        <p>25 titres • Partagée par Ami2</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="music-player">
+        <div class="now-playing">
+            <div class="thumbnail"></div>
+            <div class="song-info">
+                <h3>Titre de la chanson</h3>
+                <p>Artiste</p>
+            </div>
+            <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="player-controls">
+            <button class="btn-shuffle"><i class="fas fa-random"></i></button>
+            <button class="btn-prev"><i class="fas fa-step-backward"></i></button>
+            <button class="btn-play"><i class="fas fa-play"></i></button>
+            <button class="btn-next"><i class="fas fa-step-forward"></i></button>
+            <button class="btn-repeat"><i class="fas fa-redo"></i></button>
+        </div>
+        <div class="progress-container">
+            <span class="time current">0:00</span>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="time total">0:00</span>
+        </div>
+        <div class="additional-controls">
+            <button class="btn-queue"><i class="fas fa-list"></i></button>
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <div class="volume-slider">
+                    <div class="volume-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de création de playlist -->
+    <div class="modal-create-playlist" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Créer une playlist</h2>
+                <button class="btn-close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="playlist-name">Nom de la playlist</label>
+                    <input type="text" id="playlist-name" placeholder="Ma nouvelle playlist">
+                </div>
+                <div class="form-group">
+                    <label for="playlist-description">Description (optionnelle)</label>
+                    <textarea id="playlist-description" placeholder="Décrivez votre playlist"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Image de couverture</label>
+                    <div class="upload-cover">
+                        <div class="upload-preview">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <button class="btn-upload">Choisir une image</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel">Annuler</button>
+                <button class="btn-create">Créer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js" type="module"></script>
+    <script src="js/playlists.js" type="module"></script>
+</body>
+</html>

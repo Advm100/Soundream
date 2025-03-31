@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque - NightFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/library.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-music"></i>
+            <span>NightFlow</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="explore.html">Explorer</a></li>
+                <li><a href="library.html" class="active">Bibliothèque</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Rechercher...">
+            </div>
+            <button class="btn-profile">
+                <i class="fas fa-user"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="library-header">
+            <h1>Votre Bibliothèque</h1>
+        </section>
+
+        <div class="library-container">
+            <div class="library-sidebar">
+                <h3>Catégories</h3>
+                <ul class="sidebar-menu">
+                    <li class="active"><i class="fas fa-heart"></i> Titres aimés</li>
+                    <li><i class="fas fa-history"></i> Récemment écoutés</li>
+                    <li><i class="fas fa-download"></i> Téléchargements</li>
+                    <li><i class="fas fa-star"></i> Favoris</li>
+                </ul>
+                
+                <h3>Playlists</h3>
+                <ul class="sidebar-menu">
+                    <li><i class="fas fa-plus"></i> Créer une playlist</li>
+                    <li><i class="fas fa-list"></i> Ambiance Nocturne</li>
+                    <li><i class="fas fa-list"></i> Concentration</li>
+                    <li><i class="fas fa-list"></i> Soirée Lounge</li>
+                </ul>
+            </div>
+
+            <div class="library-content">
+                <div class="content-header">
+                    <h2>Titres aimés</h2>
+                    <div class="content-controls">
+                        <button class="btn-sort">
+                            <i class="fas fa-sort"></i> Trier par
+                        </button>
+                        <button class="btn-play-all">
+                            <i class="fas fa-play"></i> Tout lire
+                        </button>
+                    </div>
+                </div>
+
+                <div class="songs-table">
+                    <div class="table-header">
+                        <div class="column-number">#</div>
+                        <div class="column-title">Titre</div>
+                        <div class="column-artist">Artiste</div>
+                        <div class="column-album">Album</div>
+                        <div class="column-date">Date d'ajout</div>
+                        <div class="column-duration">Durée</div>
+                    </div>
+                    
+                    <div class="table-body">
+                        <div class="song-row">
+                            <div class="column-number">1</div>
+                            <div class="column-title">
+                                <div class="song-info-cell">
+                                    <div class="song-thumbnail"></div>
+                                    <div class="song-details">
+                                        <div class="song-name">Midnight Serenade</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column-artist">Luna Eclipse</div>
+                            <div class="column-album">Lunar Phase</div>
+                            <div class="column-date">Aujourd'hui</div>
+                            <div class="column-duration">3:30</div>
+                        </div>
+
+                        <div class="song-row">
+                            <div class="column-number">2</div>
+                            <div class="column-title">
+                                <div class="song-info-cell">
+                                    <div class="song-thumbnail"></div>
+                                    <div class="song-details">
+                                        <div class="song-name">Dark Dreams</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column-artist">Shadow Pulse</div>
+                            <div class="column-album">Nightfall</div>
+                            <div class="column-date">Hier</div>
+                            <div class="column-duration">4:15</div>
+                        </div>
+
+                        <div class="song-row">
+                            <div class="column-number">3</div>
+                            <div class="column-title">
+                                <div class="song-info-cell">
+                                    <div class="song-thumbnail"></div>
+                                    <div class="song-details">
+                                        <div class="song-name">Neon Nights</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column-artist">Cyber Wave</div>
+                            <div class="column-album">Electric Dreams</div>
+                            <div class="column-date">Il y a 3 jours</div>
+                            <div class="column-duration">3:05</div>
+                        </div>
+
+                        <div class="song-row">
+                            <div class="column-number">4</div>
+                            <div class="column-title">
+                                <div class="song-info-cell">
+                                    <div class="song-thumbnail"></div>
+                                    <div class="song-details">
+                                        <div class="song-name">Eternal Echo</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column-artist">Mystic Mind</div>
+                            <div class="column-album">Reflections</div>
+                            <div class="column-date">25 mars</div>
+                            <div class="column-duration">4:42</div>
+                        </div>
+
+                        <div class="song-row">
+                            <div class="column-number">5</div>
+                            <div class="column-title">
+                                <div class="song-info-cell">
+                                    <div class="song-thumbnail"></div>
+                                    <div class="song-details">
+                                        <div class="song-name">Electric Soul</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column-artist">Voltage Vibe</div>
+                            <div class="column-album">Current</div>
+                            <div class="column-date">22 mars</div>
+                            <div class="column-duration">3:52</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="music-player">
+        <div class="now-playing">
+            <div class="thumbnail"></div>
+            <div class="song-info">
+                <h3>Titre de la chanson</h3>
+                <p>Artiste</p>
+            </div>
+            <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="player-controls">
+            <button class="btn-shuffle"><i class="fas fa-random"></i></button>
+            <button class="btn-prev"><i class="fas fa-step-backward"></i></button>
+            <button class="btn-play"><i class="fas fa-play"></i></button>
+            <button class="btn-next"><i class="fas fa-step-forward"></i></button>
+            <button class="btn-repeat"><i class="fas fa-redo"></i></button>
+        </div>
+        <div class="progress-container">
+            <span class="time current">0:00</span>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="time total">0:00</span>
+        </div>
+        <div class="additional-controls">
+            <button class="btn-queue"><i class="fas fa-list"></i></button>
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <div class="volume-slider">
+                    <div class="volume-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js" type="module"></script>
+    <script src="js/library.js" type="module"></script>
+</body>
+</html>

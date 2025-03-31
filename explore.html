@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorer - NightFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/explore.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-music"></i>
+            <span>NightFlow</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="explore.html" class="active">Explorer</a></li>
+                <li><a href="library.html">Bibliothèque</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Rechercher...">
+            </div>
+            <button class="btn-profile">
+                <i class="fas fa-user"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="explore-header">
+            <h1>Explorer</h1>
+            <p>Découvrez de nouveaux genres, artistes et ambiances</p>
+        </section>
+
+        <section class="genres">
+            <h2>Genres</h2>
+            <div class="genre-tabs">
+                <button class="genre-tab active">Tous</button>
+                <button class="genre-tab">Électronique</button>
+                <button class="genre-tab">Jazz</button>
+                <button class="genre-tab">Lo-Fi</button>
+                <button class="genre-tab">R&B</button>
+                <button class="genre-tab">Ambient</button>
+            </div>
+            <div class="music-grid">
+                <!-- Les éléments seront générés par JavaScript -->
+            </div>
+        </section>
+
+        <section class="artists">
+            <h2>Artistes populaires</h2>
+            <div class="artist-carousel">
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="https://via.placeholder.com/150/121212/9d4edd?text=Artist" alt="Artist">
+                    </div>
+                    <h3>Luna Eclipse</h3>
+                    <p>Électronique, Ambient</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="https://via.placeholder.com/150/121212/9d4edd?text=Artist" alt="Artist">
+                    </div>
+                    <h3>Shadow Pulse</h3>
+                    <p>Lo-Fi, Jazz</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="https://via.placeholder.com/150/121212/9d4edd?text=Artist" alt="Artist">
+                    </div>
+                    <h3>Cyber Wave</h3>
+                    <p>Électronique, Synthwave</p>
+                </div>
+                <div class="artist-card">
+                    <div class="artist-image">
+                        <img src="https://via.placeholder.com/150/121212/9d4edd?text=Artist" alt="Artist">
+                    </div>
+                    <h3>Mystic Mind</h3>
+                    <p>Ambient, Chill</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mood-playlists">
+            <h2>Par ambiance</h2>
+            <div class="mood-grid">
+                <div class="mood-card">
+                    <div class="mood-icon"><i class="fas fa-moon"></i></div>
+                    <h3>Soirée calme</h3>
+                </div>
+                <div class="mood-card">
+                    <div class="mood-icon"><i class="fas fa-book"></i></div>
+                    <h3>Concentration</h3>
+                </div>
+                <div class="mood-card">
+                    <div class="mood-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Énergique</h3>
+                </div>
+                <div class="mood-card">
+                    <div class="mood-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Ambiance romantique</h3>
+                </div>
+                <div class="mood-card">
+                    <div class="mood-icon"><i class="fas fa-cloud-rain"></i></div>
+                    <h3>Mélancolique</h3>
+                </div>
+                <div class="mood-card">
+                    <div class="mood-icon"><i class="fas fa-running"></i></div>
+                    <h3>Sport & Fitness</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="music-player">
+        <div class="now-playing">
+            <div class="thumbnail"></div>
+            <div class="song-info">
+                <h3>Titre de la chanson</h3>
+                <p>Artiste</p>
+            </div>
+            <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="player-controls">
+            <button class="btn-shuffle"><i class="fas fa-random"></i></button>
+            <button class="btn-prev"><i class="fas fa-step-backward"></i></button>
+            <button class="btn-play"><i class="fas fa-play"></i></button>
+            <button class="btn-next"><i class="fas fa-step-forward"></i></button>
+            <button class="btn-repeat"><i class="fas fa-redo"></i></button>
+        </div>
+        <div class="progress-container">
+            <span class="time current">0:00</span>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="time total">0:00</span>
+        </div>
+        <div class="additional-controls">
+            <button class="btn-queue"><i class="fas fa-list"></i></button>
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <div class="volume-slider">
+                    <div class="volume-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js" type="module"></script>
+    <script src="js/explore.js" type="module"></script>
+</body>
+</html>

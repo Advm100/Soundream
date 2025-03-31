@@ -1,0 +1,246 @@
+/* Effets de survol (hover) améliorés */
+
+/* Effet de survol pour les cartes */
+.hover-lift {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.4s ease,
+                background-color 0.4s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(157, 78, 221, 0.3);
+    z-index: 5;
+}
+
+/* Effet de glow au survol */
+.hover-glow {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+}
+
+/* Effet de bordure animée */
+.hover-border {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    pointer-events: none;
+    transition: border-color 0.3s ease;
+    z-index: 1;
+}
+
+.hover-border:hover::before {
+    border-color: var(--accent-color);
+}
+
+/* Effet de bordure qui se dessine */
+.hover-border-draw {
+    position: relative;
+}
+
+.hover-border-draw::before,
+.hover-border-draw::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hover-border-draw::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid var(--accent-color);
+    border-left: 2px solid var(--accent-color);
+}
+
+.hover-border-draw::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid var(--accent-color);
+    border-right: 2px solid var(--accent-color);
+}
+
+.hover-border-draw:hover::before,
+.hover-border-draw:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+/* Effet d'expansion de texte */
+.hover-text-expand {
+    transition: letter-spacing 0.3s ease;
+}
+
+.hover-text-expand:hover {
+    letter-spacing: 1px;
+}
+
+/* Effet de changement de couleur de texte */
+.hover-text-color {
+    transition: color 0.3s ease;
+}
+
+.hover-text-color:hover {
+    color: var(--accent-color);
+}
+
+/* Effet d'icône qui bouge */
+.hover-icon-move i {
+    transition: transform 0.3s ease;
+}
+
+.hover-icon-move:hover i {
+    transform: translateX(5px);
+}
+
+/* Effet de soulignement */
+.hover-underline {
+    position: relative;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-gradient);
+    transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/* Effet de zoom sur les images */
+.hover-zoom-img img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hover-zoom-img:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* Effet d'ombre portée pour les boutons */
+.hover-shadow-btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-shadow-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet de focus pour le lecteur */
+.hover-focus {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.hover-focus:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Effet de rotation */
+.hover-rotate {
+    transition: transform 0.5s ease;
+}
+
+.hover-rotate:hover {
+    transform: rotate(5deg);
+}
+
+/* Effets pour les boutons du player */
+.player-controls button {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                color 0.3s ease, 
+                text-shadow 0.3s ease;
+}
+
+.player-controls button:hover {
+    transform: scale(1.15);
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(157, 78, 221, 0.5);
+}
+
+/* Effet de pulse pour le bouton play */
+.btn-play {
+    transition: transform 0.3s ease, 
+                box-shadow 0.3s ease, 
+                background-color 0.3s ease;
+}
+
+.btn-play:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.7);
+    animation: pulse-btn 2s infinite;
+}
+
+@keyframes pulse-btn {
+    0% {
+        box-shadow: 0 0 0 0 rgba(157, 78, 221, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(157, 78, 221, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(157, 78, 221, 0);
+    }
+}
+
+/* Effets pour les éléments de menu */
+.menu-item {
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.menu-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: var(--accent-gradient);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.menu-item:hover::before {
+    transform: scaleY(1);
+}
+
+/* Effet pour le header */
+header {
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+.header-shrink {
+    padding: 10px 40px !important;
+    background-color: rgba(10, 10, 14, 0.9) !important;
+}

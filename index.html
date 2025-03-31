@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightFlow - Streaming Musical</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <!-- Nouveaux fichiers CSS -->
+    <link rel="stylesheet" href="css/glass.css">
+    <link rel="stylesheet" href="css/hover-effects.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-music"></i>
+            <span>NightFlow</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="explore.html">Explorer</a></li>
+                <li><a href="library.html">Bibliothèque</a></li>
+                <li><a href="playlists.html">Playlists</a></li>
+            </ul>
+        </nav>
+        <div class="user-controls">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Rechercher...">
+            </div>
+            <button class="btn-profile">
+                <i class="fas fa-user"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero animate-on-scroll">
+            <div class="hero-content">
+                <h1 class="animate-text">Découvrez la musique <span>différemment</span></h1>
+                <p>Votre nouvelle expérience de streaming musical avec une ambiance sombre et élégante.</p>
+                <button class="btn-primary hover-shadow-btn">Commencer l'écoute</button>
+            </div>
+            <div class="hero-visual">
+                <div class="album-cover spinning"></div>
+                <div class="audio-waves">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="trending animate-on-scroll">
+            <h2>Tendances</h2>
+            <div class="music-grid">
+                <!-- Les éléments seront générés par JavaScript -->
+            </div>
+        </section>
+
+        <section class="categories animate-on-scroll">
+            <h2>Genres</h2>
+            <div class="category-grid">
+                <!-- Les éléments seront générés par JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <div class="music-player">
+        <div class="now-playing">
+            <div class="thumbnail"></div>
+            <div class="song-info">
+                <h3>Titre de la chanson</h3>
+                <p>Artiste</p>
+            </div>
+            <button class="btn-like"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="player-controls">
+            <button class="btn-shuffle"><i class="fas fa-random"></i></button>
+            <button class="btn-prev"><i class="fas fa-step-backward"></i></button>
+            <button class="btn-play"><i class="fas fa-play"></i></button>
+            <button class="btn-next"><i class="fas fa-step-forward"></i></button>
+            <button class="btn-repeat"><i class="fas fa-redo"></i></button>
+        </div>
+        <div class="progress-container">
+            <span class="time current">0:00</span>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="time total">0:00</span>
+        </div>
+        <div class="additional-controls">
+            <button class="btn-queue"><i class="fas fa-list"></i></button>
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <div class="volume-slider">
+                    <div class="volume-progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de base -->
+    <script src="js/app.js" type="module"></script>
+    <script src="js/player.js" type="module"></script>
+    <script src="js/animations.js" type="module"></script>
+    <script src="js/api.js" type="module"></script>
+    
+    <!-- Nouveaux scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/audio-visualizer.js"></script>
+    <script src="js/loading-screen.js"></script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/page-transitions.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/user-profile.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/mobile-optimization.js"></script>
+</body>
+</html>

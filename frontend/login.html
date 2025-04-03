@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NightFlow</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/glass.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo-section">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <span>NightFlow</span>
+            </div>
+            <div class="tagline">Your Premium Music Experience</div>
+        </div>
+        
+        <div class="auth-container" id="auth-forms-container"></div>
+        
+        <div class="login-background">
+            <div class="album-cover spinning"></div>
+            <div class="audio-waves">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="login-footer">
+            <p>© 2025 NightFlow. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module">
+        import AuthForms from './js/components/AuthForms.js';
+        
+        // Initialize the auth forms
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('auth-forms-container');
+            const authForms = new AuthForms(container);
+            authForms.render();
+        });
+    </script>
+</body>
+</html>
